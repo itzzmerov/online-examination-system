@@ -1,0 +1,343 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+@font-face {
+    font-family: 'nexa_slab_regular_freeregular';
+    src: url('../fonts/nexa_slab_regular-webfont.woff2') format('woff2'),
+         url('../fonts/nexa_slab_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* VARIABLES */
+:root {
+    --main-color: #3F1651;
+    --primary-color: #A0D1D5;
+    --secondary-color: #F89F5B;
+    --third-color: #FB8500;
+    --fourth-color: #653780;
+    --fifth-color: #9C3587;
+    --sixth-color: #E53F71; 
+    --black: #13131a; 
+    --bg: #FFFFFF; 
+    --border: 1px solid rgba(0, 0, 0, 0.3);
+    --box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    --border-radius: 50px;
+    --transition: all 0.5s ease;
+}
+
+/* RESET & HELPERS */
+body {
+    font-family: 'nexa_slab_regular_freeregular';
+    line-height: 1.7;
+    background-color: var(--bg);
+}
+
+h1, h2, h3,h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 500;
+    color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    color: var(--bg);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* IMAGE ZOOM */
+.image-zoom {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+     transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+
+
+/* NAVBAR */
+nav {
+    box-shadow: var(--box-shadow);
+    background-color: var(--main-color);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--bg);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+}
+
+.navbar .logo-img {
+    width: 100px;
+    height: 100px;
+}
+
+.navbar-toggler {
+    color: var(--main-color);
+}
+
+
+/* BTN */
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--black);
+    border-radius: 100px;
+}
+
+.btn-brand:hover {
+    background-color: var(--third-color);
+    border-color: var(--third-color);
+    color: var(--black);
+    box-shadow: var(--box-shadow);
+}
+
+
+/* HERO */
+#hero {
+    background-image: url('../images/hero-img.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-position: center;
+    background-size: cover;
+}
+
+#hero .container .heading-container {
+    max-width: 500px;
+}
+
+/* SECTION TITLE */
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ICONBOX */
+.iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-size: 34px;
+    flex: none;
+}
+
+.icons {
+    color: var(--bg);
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+span {
+    color: var(--bg);
+    font-size: 40px;
+}
+
+/* TEAM */
+.team-member-content {
+    background-color: var(--fourth-color);
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    width: calc(100% - 50px);
+    transform: translateX(-50%);
+    padding: 24px;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.team-member:hover .team-member-content {
+    opacity: 1;
+    bottom: 24px;
+}
+
+/* CONTACT */
+#contact {
+    background-image: url('../images/contact-bg.png');
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: var(--box-shadow);
+}
+
+#contact .email {
+    border-radius: 100px;
+    height: 60px;
+    padding-left: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+#contact .message {
+    border-radius: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+#contact .contact-btn {
+    width: 300px;
+    height: 60px;
+}
+
+form {
+    background-color: var(--main-color);
+}
+
+/* FOOTER */
+footer {
+    padding-top: 120px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top .logo-img {
+    width: 100px;
+    height: 100px;
+}
+
+.footer-top .logo-title {
+    color: var(--bg);
+}
+
+.footer-top .contact-info {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.footer-bottom .go-to {
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+footer li,
+footer p,
+footer a {
+    color: rgba(255,255,255,0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--bg);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.footer-top .newsletter {
+    width: 100%;
+    height: 50px;
+    border-radius: 2.5rem;
+    padding: 1.8rem;
+    color: #212529;
+    background-color: var(--secondary-color);
+    margin-top: 10px;
+    padding-right: 30px;
+    box-shadow: none;
+    border: none;
+}  
+
+.newsletter::placeholder {
+    color: #212529;
+}
+
+.input-wrapper {
+    position: relative;
+}
+.btn-send {
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    bottom: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    color: #212529;
+}
